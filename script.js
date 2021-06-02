@@ -36,3 +36,25 @@ function checkByte(obj, maxByte) {
     document.getElementById("byteCnt").innerText = readByte;
   }
 }
+
+// 한자리 숫자 0 붙이기
+function numberPad(n, width) {
+	n = n + '';
+	return n.length >= width ? n : new Array(width - n.length + 1).join('0') + n;
+}
+
+// 글자수 제한
+	function wordLimit(e) {
+		var wordTarget = $(".event_wallstreet_textarea");
+		var wordCount = $(".word_limit .word_limit_count");
+
+		wordTarget.on("keyup", function() {
+			var wordCountLength = $(this).val().length;
+			wordCount.html(wordCountLength);
+
+			if($(this).val().length >= 300) {
+				$(this).val($(this).val().substring(0, 300));
+				wordCount.html("300");
+			}
+		});
+	}
