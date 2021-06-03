@@ -58,3 +58,22 @@ function wordLimit(e) {
         }
     });
 }
+
+
+// accordion
+function listAccordion() {
+    var accordionItem = $(".js-accordion-item");
+    var accordionBtn = $(".js-btn-accordion");
+    var accordionBox = $(".js-accordion-box");
+
+    // 처음 리스트 열기
+    if (accordionItem.hasClass("on")) {
+        accordionItem.parent().find(".on").removeClass("on").addClass("active").find(accordionBox).slideDown("fast");
+    }
+
+    accordionBtn.on("click", function() {
+        $(this).closest(accordionItem).siblings().removeClass("active").find(accordionBox).slideUp("fast");
+
+        $(this).closest(accordionItem).addClass("active").find(accordionBox).slideDown("fast");
+    });
+}
