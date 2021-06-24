@@ -77,3 +77,31 @@ function listAccordion() {
         $(this).closest(accordionItem).addClass("active").find(accordionBox).slideDown("fast");
     });
 }
+
+// scroll fadeup ani
+function fadeUpani() {
+  var workItem = $(".js-workItemsItem");
+
+  function checkIfInView() {
+    var scrollTop = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    var windowBottomPosition = (scrollTop + windowHeight);
+
+    $.each(workItem, function() {
+      var _this = $(this);
+      var elementHeight = _this.outerHeight();
+      var elementTopPosition = _this.offset().top;
+      var elementBottomPosition = (elementTopPosition + elementHeight);
+
+      if ((elementBottomPosition >= scrollTop) &&
+        (elementTopPosition <= windowBottomPosition)) {
+        _this.addClass("fade-up");
+      } else {
+        _this.removeClass("fade-up");
+      }
+    });
+  }
+
+  $(window).on("scroll resize", checkIfInView);
+  $(window).trigger("scroll");
+}
