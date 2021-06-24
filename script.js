@@ -3,6 +3,7 @@ function checkByte(obj, maxByte) {
     var str = obj.value;
     var strLen = str.length;
     var readByte = 0;
+    var maxByte = 80;
     var readLen = 0;
     var oneChar = "";
     var strSplit = "";
