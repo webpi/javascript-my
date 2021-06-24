@@ -1,0 +1,24 @@
+* {margin:0;padding:0}
+table {width:80%;margin:20px auto 0;border-collapse:collapse;border:1px solid #ccc}
+th,td {padding:10px 0;text-align:center;vertical-align:middle}
+th {background:#efefef}
+td > div {position:relative;padding: 5px}
+tr .yellow div {background:#ffd47e}
+tr .green div {background:#96d782}
+tr .red div {background:#f5a27b}
+
+tr .yellow.first div,
+tr .green.first div,
+tr .red.first div
+{
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+tr .yellow.last div,
+tr .green.last div,
+tr .red.last div
+{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
