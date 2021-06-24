@@ -1,9 +1,9 @@
 # javascript-my
 
-|  #  |            설명             | Function |
+|  #  |            Function             |  |
 | :-: | :----------------------------: | :-------: |
-| 01  |       [글자 byte 체크]       | [글자 byte 체크]  |
-| 02  |     [Movie Seat Booking]    | [Live Demo]  |
-| 03  |    [Custom Video Player]     | [Live Demo]  |
-| 04  |  [Exchange Rate Calculator]  | [Live Demo]  |
-| 05  | [fade up animation]  | [fadeUpAni]  |
+| 01  |       [checkByte]       | [글자수 체크]  |
+| 02  |     [numberPad]    | [한자리 숫자 0 붙이기]  |
+| 03  |    [wordLimit]     | [글자수 제한]  |
+| 04  |  [listAccordion]  | [아코디언 리스트]  |
+| 05  | [fadeUpAni]  | [fadeup 모션]  |
